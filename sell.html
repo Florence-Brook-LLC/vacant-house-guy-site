@@ -1,1 +1,69 @@
-<html><body>Placeholder sell</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Your Property</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Vacant House Guy logo" class="logo">
+    <h1>Vacant House Guy</h1>
+    <p class="tagline">Got a Property You’ve Been Avoiding? Let’s Talk.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sell.html">Sell Your Property</a>
+      <a href="investors.html">Investor Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Sell Your Property</h2>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+      <input type="hidden" name="accessKey" value="sf_213gne13mil841mi2nbgm74a">
+      <input type="hidden" name="redirectTo" value="https://vacanthouseguy.com/thank-you.html">
+
+      <label>Full Name:<br><input type="text" name="name" required></label>
+      <label>Email:<br><input type="email" name="email" required></label>
+      <label>Phone Number:<br><input type="tel" name="phone" required></label>
+      <label>Property Address:<br><textarea name="address" required></textarea></label>
+      <label>Do you own this property?<br>
+        <select name="ownership" required>
+          <option value="">-- Please select --</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+
+      <label>Bedrooms / Bathrooms:<br><input type="text" name="bedbath"></label>
+      <label>Property Condition:<br>
+        <select name="condition">
+          <option value="">-- Select --</option>
+          <option value="tear-down">Tear-down</option>
+          <option value="major-rehab">Major rehab (roof/foundation)</option>
+          <option value="total-makeover">Total makeover</option>
+          <option value="minor">Some minor details</option>
+          <option value="turnkey">Turnkey</option>
+        </select>
+      </label>
+      <label>Occupied?<br>
+        <select name="occupied">
+          <option value="">-- Please select --</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+      <label>Square Footage:<br><input type="text" name="sqft"></label>
+      <label>How did you hear about us?<br><input type="text" name="referral"></label>
+      <label>Other Notes:<br><textarea name="notes"></textarea></label>
+
+      <div class="g-recaptcha" data-sitekey="6LcGVjArAAAAACQeLZs-OIjqYbLlo0jGQ7ZYCNVQ"></div>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Florence Brook, LLC DBA Vacant House Guy, a Central New York company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
